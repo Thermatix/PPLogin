@@ -33,7 +33,7 @@ The helpers are:
 - logout_path = the path you can use to logout the user with (expects 
 `:refresh_token` param.
 
-to use these helpers include `PpLogin::Helpers` within your application_controller, they should be immediately available within the views..
+to use these helpers include `PpLogin::Helpers` within your application_controller, they should be immediately available within the views and controllers.
 
 
 - user_info = will automatically return the user info after having been re-directed from the engine

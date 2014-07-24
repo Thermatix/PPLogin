@@ -1,6 +1,6 @@
 
 
-To install:
+To install and setup just follow the following:
 
 add to routes: 
 ```
@@ -26,22 +26,22 @@ end
 
 The helpers are:
 
-.get_token_path = the path that paypal login will redirect to.
-.refresh_token_path = the path you can use to refresh the access token (expects `:refresh_token` param).
-.user_info_path = the path you can use to retreive user info (expects 
+- get_token_path = the path that paypal login will redirect to.
+- refresh_token_path = the path you can use to refresh the access token (expects `:refresh_token` param).
+- user_info_path = the path you can use to retreive user info (expects 
 `:access_token` param)
-.logout_path = the path you can use to logout the user with (expects 
+- logout_path = the path you can use to logout the user with (expects 
 `:refresh_token` param.
 
 to use these helpers include `PpLogin::Helpers` within your application_controller.
 
-user_info = will automaticly return the user info after having been re-directed from the engine
+- user_info = will automaticly return the user info after having been re-directed from the engine
 
-token = will automaticly return the token values after having been re-directed by from the engine
+- token = will automaticly return the token values after having been re-directed by from the engine
 Token Store
 
 There are several methods to deal with the token
-:param, will return token values as a param in the URL bar `:token`/`:user`, it's pre-parsed to json. (not secure)
-:session, will store token in session under `:token`/`:user`, it's pre-parsed to json.
-:cookie, will store token in cookies under `:token`/`:user`,it's pre-parsed to json.
-:db, will store token into DB model that you supply (not implemented yet)
+- :param, will return token values as a param in the URL bar `:token`/`:user`, it's pre-parsed to json. (not secure)
+- :session, will store token in session under `:token`/`:user`, it's pre-parsed to json.
+- :cookie, will store token in cookies under `:token`/`:user`,it's pre-parsed to json.
+- :db, will store token into DB model that you supply (not implemented yet)

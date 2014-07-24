@@ -17,7 +17,7 @@ PpLogin.setup do |config|
   config.redirect_url = 'redirect_url' #put here where you want the engine to redirect to after it's gotten the access token/user_info, if left out it defaults to the website_url.
   config.mode = "sandbox" #or 'live'
   config.scope = 'scope' #not really needed as it defaults to 'openid email'
-  config.token_store = :param # or:session, :cookie, :db, will default to :session if no value is supplied. How you want the engine to deal with the access token, see token store to understand the different options. 
+  config.token_store = :param # or :session, :cookie, :db, will default to :session if no value is supplied. How you want the engine to deal with the access token, see token store to understand the different options. 
   config.token_model = :model_name # if token_Store is set to :db then this is the name of the model to store it into.
   config.user_store = :param #same as token_store
   condif.user_model = :model_name #same as token_model
@@ -28,16 +28,17 @@ The helpers are:
 
 - get_token_path = the path that paypal login will redirect to.
 - refresh_token_path = the path you can use to refresh the access token (expects `:refresh_token` param).
-- user_info_path = the path you can use to retreive user info (expects 
+- user_info_path = the path you can use to retrieve user info (expects 
 `:access_token` param)
 - logout_path = the path you can use to logout the user with (expects 
 `:refresh_token` param.
 
-to use these helpers include `PpLogin::Helpers` within your application_controller.
+to use these helpers include `PpLogin::Helpers` within your application_controller, they should be immediately available within the views..
 
-- user_info = will automaticly return the user info after having been re-directed from the engine
 
-- token = will automaticly return the token values after having been re-directed by from the engine
+- user_info = will automatically return the user info after having been re-directed from the engine
+
+- token = will automatically return the token values after having been re-directed by from the engine
 Token Store
 
 There are several methods to deal with the token

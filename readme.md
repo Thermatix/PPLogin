@@ -26,14 +26,14 @@ end
 
 The helpers are:
 
-- get_token_path = the path that paypal login will redirect to.
+- get_token_path = the path that PayPal will redirect to after the user has logged into, you shouldn't need to use this..
 - refresh_token_path = the path you can use to refresh the access token (expects `:refresh_token` param).
 - user_info_path = the path you can use to retrieve user info (expects 
 `:access_token` param)
-- logout_path = the path you can use to logout the user with (expects 
-`:refresh_token` param.
+- logout_path = the path you can use to logout the user (expects 
+`:refresh_token` param).
 
-to use these helpers include `PpLogin::Helpers` within your application_controller, they should be immediately available within the views and controllers.
+To use the following helpers include `PpLogin::Helpers` within your application_controller, they should be immediately available within the views and controllers.
 
 
 - user_info = will automatically return the user info after having been re-directed from the engine

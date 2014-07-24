@@ -10,7 +10,7 @@ module PpLogin
     		PayPal::SDK.configure({
     			openid_client_id: PpLogin.id,
     			openid_client_secret: PpLogin.secret,
-    			openid_redirect_uri: PpLogin.website_url + '/pp_login/token',
+    			openid_redirect_uri: PpLogin.website_url + '/pp_login/get_token',
     			mode: PpLogin.mode,
     			})
     			scope = PpLogin.scope || 'openid email'

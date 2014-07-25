@@ -40,7 +40,7 @@ To use the following helpers include `PpLogin::Helpers` within your application_
 
 - token = will automatically return the token values after having been re-directed by from the engine
 
-- paypal_login(type,options) = used to generate a link or a button to login with paypal. type can be either `:button` or `:link`, the default text is "Login With PayPal" but can be changed by with the `text:` option; You can supply normal link_to or button_to options as well. 
+- paypal_login(type,options) = used to generate a link or a button to login with paypal. type can be either `:button` or `:link`. Options accepts a hash, you can supply normal link_to or button_to options as well. The default text is "Login With PayPal" but can be changed by with the `text:` option.
 
 
 Token Store

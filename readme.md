@@ -46,3 +46,5 @@ There are several methods to deal with the token
 - :session, will store token in session under `:token`/`:user`, it's pre-parsed to json.
 - :cookie, will store token in cookies under `:token`/`:user`,it's pre-parsed to json.
 - :db, will store token into DB model that you supply (not implemented yet)
+
+The link to send the user to to begin the login process is stored in `PpLogin.loginURL` there is no helper as of yet

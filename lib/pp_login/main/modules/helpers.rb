@@ -1,7 +1,7 @@
 module PpLogin
 	module Helpers
 		def self.included(base)
-			base.send :helper_method, {:user_info, :token}
+			base.send :helper_method, :user_info, :token
 		end
 		def user_info
 			case(PpLogin.user_store)

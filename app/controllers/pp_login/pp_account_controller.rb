@@ -1,5 +1,5 @@
 module PpLogin
-  class PpAccount < ApplicationController
+  class PpAccount < ApplicationController #fix this so it it's propperly named acourding to conventions
 
   	def get_token
   		token = Engine.get_access_token(token_params[:code])

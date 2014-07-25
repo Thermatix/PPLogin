@@ -3,6 +3,8 @@ module PpLogin
 		def self.included(base)
 			base.send :helper_method, :user_info, :token
 		end
+		
+		#need to DRY up this code. consider moving for_action from PpAccountController to the PpLogin namespace.
 		def user_info
 			case(PpLogin.user_store)
 			when :param

@@ -47,4 +47,4 @@ There are several methods to deal with the token
 - :cookie, will store token in cookies under `:token`/`:user`,it's pre-parsed to json.
 - :db, will store token into DB model that you supply (not implemented yet)
 
-The link to send the user to to begin the login process is stored in `PpLogin.loginURL` there is no helper as of yet
+The link to send the user to paypal so they can login is stored in `PpLogin.loginURL` there is no helper as of yet.

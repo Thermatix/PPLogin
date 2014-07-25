@@ -17,5 +17,9 @@ module PpLogin
     			PpLogin.loginURL = Tokeninfo.authorize_url( scope: scope)
     	end
     end
+
+    def temp(value)
+    	return (value + 59)
+    end
   end
 end
